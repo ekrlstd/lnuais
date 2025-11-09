@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <!--below is an svg pattern that simulates grain-->
+    <svg style="position: fixed; width: 0; height: 0">
+      <filter id="noise">
+        <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" />
+        <feColorMatrix type="saturate" values="0" />
+        <feComponentTransfer>
+          <feFuncA type="discrete" tableValues="0 0.05" />
+        </feComponentTransfer>
+        <feBlend mode="overlay" in="SourceGraphic" />
+      </filter>
+    </svg>
+
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>

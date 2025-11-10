@@ -9,6 +9,7 @@ body {
   padding: 0;
   width: 100%;
   min-height: 100vh;
+  background-color: #1c1c1c;
   background-image: url("../images/background-tall-grain.png");
   background-size: 100% auto;
   background-position: top center;
@@ -16,9 +17,6 @@ body {
   background-attachment: scroll;
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 16px;
 }
 
 h1,
@@ -26,28 +24,92 @@ h2,
 h3,
 h4,
 p {
+  color: #1c1c1c;
+}
+
+.hero {
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 70px;
+  margin-top: 10rem;
+  font-weight: 700;
+}
+
+.hero p {
+  max-width: 75ch;
+  font-size: 24px;
+  font-weight: 500;
+  margin: 0 auto; /* centers horizontally */
+}
+
+.card {
+  margin: auto;
+  padding-top: 0.2rem;
+  padding-left: 1.6rem;
+  padding-bottom: 0.2rem;
+  margin-top: 10rem;
+  position: center;
+  max-width: 80rem;
+  border-radius: 1.5rem;
+  background-color: #1e1e1e;
+}
+
+.card h2 {
+  color: #fcfbf8;
+  font-weight: 600;
+}
+
+.card p {
   color: #fcfbf8;
 }
 
 .navbar {
   display: flex;
   background: #1c1c1caa;
+  border-color: #1c1c1caa;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border-radius: 1.875rem;
-  padding: 0.625rem 1.25rem;
-  margin: 0 auto;
-  width: 95%;
-  height: 3.5rem;
+  width: 100%;
+  top: 0px;
+  height: 4.5rem;
   justify-content: space-between;
   align-items: center;
   position: fixed;
-  top: 1rem;
-  left: 0;
-  right: 0;
   z-index: 999;
   border-style: solid;
-  border-color: #606060;
+  border-bottom-color: #505050;
+  border-width: 1px;
+}
+
+.logo {
+  width: 5rem;
+}
+
+.menu {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  gap: 0.938rem;
+}
+
+.navbar {
+  display: flex;
+  background: #1c1c1caa;
+  border-color: #1c1c1caa;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  width: 100%;
+  top: 0px;
+  height: 4.5rem;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 999;
+  border-style: solid;
+  border-bottom-color: #505050;
   border-width: 1px;
 }
 
@@ -72,5 +134,14 @@ p {
 }
 
 .item a:hover {
-  color: #e9e9e9;
+  color: #d0d0d0;
+}
+
+.highlight {
+  transition: 0.3s ease;
+}
+
+p:hover .highlight {
+  color: #ffe000;
+  background-color: #1c1c1c;
 }

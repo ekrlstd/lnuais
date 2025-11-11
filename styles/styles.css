@@ -65,6 +65,44 @@ p {
   color: #fcfbf8;
 }
 
+.cta {
+  display: flex;
+  justify-content: center;
+}
+
+.cta button {
+  margin-top: 2.5rem;
+  border-radius: 1rem;
+  width: 15rem;
+  margin: 2rem;
+  border: none; /*we have to do this for some reason to disable default*/
+  padding: 1.5rem;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.cta .primary {
+  background-color: #1c1c1c;
+  color: #fcfbf8;
+}
+
+.primary:hover {
+  cursor: pointer;
+}
+
+.secondary:hover {
+  cursor: pointer;
+}
+
+.cta .secondary {
+  background-color: transparent;
+  color: #1c1c1c;
+  border-color: #1c1c1c;
+  border-style: solid;
+  border-width: 5px;
+}
+
 .navbar {
   display: flex;
   background: #1c1c1caa;

@@ -1,6 +1,7 @@
 html {
   margin: 0;
   padding: 0;
+  padding-bottom: 2rem;
   width: 100%;
 }
 
@@ -67,11 +68,16 @@ p {
   color: #fcfbf8;
 }
 
-.info-card {
+.info-card,
+.link-card {
   display: flex;
   gap: 2rem;
   flex-wrap: wrap;
   margin-top: 2rem;
+}
+
+.info-card {
+  padding-bottom: 1rem;
 }
 
 .cards {

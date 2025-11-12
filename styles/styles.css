@@ -1,7 +1,6 @@
 html {
   margin: 0;
   padding: 0;
-  padding-bottom: 2rem;
   width: 100%;
 }
 
@@ -11,7 +10,7 @@ body {
   width: 100%;
   min-height: 100vh;
   background-color: #1c1c1c;
-  background-image: url("../images/background-tall-grain.png");
+  background-image: url("../images/background-taller-grain.png");
   background-size: 100% auto;
   background-position: top center;
   background-repeat: no-repeat;
@@ -26,6 +25,10 @@ h3,
 h4,
 p {
   color: #1c1c1c;
+}
+
+.container {
+  padding: 0 2rem 20rem 2rem;
 }
 
 .hero {
@@ -56,6 +59,7 @@ p {
   max-width: 83rem;
   border-radius: 1.5rem;
   background-color: #1e1e1e;
+  filter: drop-shadow(0 0 3rem #111111aa);
 }
 
 .card h2,
@@ -80,7 +84,10 @@ p {
   padding-bottom: 1rem;
 }
 
-.cards {
+.info-cards,
+.link-cards-1,
+.link-cards-2,
+.link-cards-3 {
   flex: 1;
   min-width: 10rem;
   padding: 1.5rem;
@@ -92,10 +99,42 @@ p {
   border-width: 1px;
 }
 
-.cards h3,
-.cards p {
+.info-cards h3,
+.info-cards p,
+.link-cards-1 h3,
+.link-cards-1 p,
+.link-cards-2 h3,
+.link-cards-2 p,
+.link-cards-3 h3,
+.link-cards-3 p {
   margin: 0;
-  margin-bottom: 1rem;
+}
+
+.link-cards-1,
+.link-cards-2,
+.link-cards-3 {
+  transition: 0.3s ease;
+}
+
+.link-cards-1:hover {
+  cursor: pointer;
+  transform: scale(1.002);
+  filter: drop-shadow(0 0 1rem #111111);
+  border-color: #ffe000;
+}
+
+.link-cards-2:hover {
+  cursor: pointer;
+  transform: scale(1.002);
+  filter: drop-shadow(0 0 1rem #111111);
+  border-color: #cd1a3d;
+}
+
+.link-cards-3:hover {
+  cursor: pointer;
+  transform: scale(1.002);
+  filter: drop-shadow(0 0 1rem #111111);
+  border-color: #5b2a86;
 }
 
 .card-icon {
@@ -219,4 +258,43 @@ p {
 p:hover .highlight {
   color: #ffe000;
   background-color: #1c1c1c;
+}
+
+footer {
+  margin: auto;
+  display: flex;
+  padding: 0 4rem;
+  color: #fcfbf8;
+  background: #1c1c1c;
+  position: center;
+  max-width: 85rem;
+  border-radius: 1.5rem 1.5rem 0 0;
+  bottom: 0;
+  height: 8.5rem;
+  justify-content: space-between;
+  align-items: center;
+  position: static;
+  z-index: 999;
+  filter: drop-shadow(0 0 3rem #111111aa);
+}
+
+footer h3,
+footer p {
+  color: #fcfbf8;
+  margin: 0; /*reset once again*/
+}
+
+footer p {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.footer-icon {
+  height: 2.2rem;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+  position: relative;
+  filter: brightness(0) invert(1);
+  top: 0.2rem;
 }

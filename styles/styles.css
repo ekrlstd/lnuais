@@ -47,22 +47,59 @@ p {
 .card {
   margin: auto;
   padding-top: 0.2rem;
-  padding-left: 1.6rem;
-  padding-bottom: 0.2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 2rem;
   margin-top: 10rem;
   position: center;
-  max-width: 80rem;
+  max-width: 83rem;
   border-radius: 1.5rem;
   background-color: #1e1e1e;
 }
 
-.card h2 {
+.card h2,
+.card h3 {
   color: #fcfbf8;
   font-weight: 600;
 }
 
 .card p {
   color: #fcfbf8;
+}
+
+.info-card {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.cards {
+  flex: 1;
+  min-width: 10rem;
+  padding: 1.5rem;
+  background-color: #2a2a2a;
+  border-radius: 1rem;
+  line-height: 1.4;
+  border-style: solid;
+  border-color: #404040;
+  border-width: 1px;
+}
+
+.cards h3,
+.cards p {
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
+.card-icon {
+  width: 1.2rem;
+  height: 1.2rem;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+  position: relative;
+  top: -0.14rem; /*because of some wierd spacing issues*/
+  filter: brightness(0) invert(1);
 }
 
 .cta {
@@ -85,14 +122,24 @@ p {
 .cta .primary {
   background-color: #1c1c1c;
   color: #fcfbf8;
+  /*sliding arrow animation setup*/
+  transition: 0.3s ease;
+  position: relative;
+  padding-right: 1.5rem;
 }
 
-.primary:hover {
-  cursor: pointer;
+.cta .primary::after {
+  content: " →";
+  position: absolute;
+  right: 1.5rem;
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: all 0.3s ease;
 }
 
-.secondary:hover {
-  cursor: pointer;
+.primary:hover::after {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .cta .secondary {
@@ -101,6 +148,18 @@ p {
   border-color: #1c1c1c;
   border-style: solid;
   border-width: 5px;
+  transition: 0.3s ease;
+}
+
+.primary:hover {
+  cursor: pointer;
+  padding-right: 3rem;
+}
+
+.secondary:hover {
+  background-color: #1c1c1c;
+  color: #fcfbf8;
+  cursor: pointer;
 }
 
 .navbar {
@@ -122,43 +181,15 @@ p {
 }
 
 .logo {
+  margin-left: 4rem;
   width: 5rem;
 }
 
 .menu {
   display: flex;
   list-style-type: none;
-  margin: 0;
-  padding: 0;
-  gap: 0.938rem;
-}
-
-.navbar {
-  display: flex;
-  background: #1c1c1caa;
-  border-color: #1c1c1caa;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  width: 100%;
-  top: 0px;
-  height: 4.5rem;
-  justify-content: space-between;
-  align-items: center;
-  position: fixed;
-  z-index: 999;
-  border-style: solid;
-  border-bottom-color: #505050;
-  border-width: 1px;
-}
-
-.logo {
-  width: 5rem;
-}
-
-.menu {
-  display: flex;
-  list-style-type: none;
-  margin: 0;
+  margin: 0; /* we need to reset all margins bc. browser sets it*/
+  margin-right: 4rem;
   padding: 0;
   gap: 0.938rem;
 }
